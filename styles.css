@@ -1,0 +1,176 @@
+/* ===== Base Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Base Style ===== */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: #3B2A20;
+    background-color: #F5EBDD;
+}
+
+/* ===== Hero ===== */
+#hero {
+    position: relative;
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #6F4E37;
+    color: #F5EBDD;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-top: 32px;
+}
+
+/* ===== Sections ===== */
+#about,
+#skills,
+#projects,
+#contact {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #6F4E37;
+    display: inline-block;
+    padding-bottom: 4px;
+    color: #3B2A20;
+}
+
+/* ===== Cards (about / skills / project / contact) ===== */
+.about-card,
+.skills-card,
+.project-card,
+.contact-card {
+    background-color: #EFDFC8;
+    border: 1px solid #D8C3A0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(59, 42, 32, 0.08);
+}
+
+/* ===== Project Grid (Flexbox) ===== */
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.project-card {
+    flex: 1 1 300px;
+}
+
+.project-card h3 {
+    color: #6F4E37;
+    margin-bottom: 8px;
+}
+
+.project-card h4 {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    color: #5C4530;
+}
+
+/* ===== Skills list ===== */
+#skills ul {
+    list-style: none;
+}
+
+#skills li {
+    margin-bottom: 8px;
+    padding-left: 12px;
+    border-left: 3px solid #6F4E37;
+}
+
+/* ===== Contact links ===== */
+#contact a {
+    color: #6F4E37;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    text-decoration: none;
+    color: #A9746E;
+}
+
+/* ===== Mobile Optimization ===== */
+@media (max-width: 600px) {
+
+    #hero {
+        padding: 40px 16px;
+    }
+
+    #hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .projects-grid {
+        flex-direction: column;
+    }
+
+    #theme-toggle {
+        top: 12px;
+        right: 12px;
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
+
+/* ===== Dark Mode Button ===== */
+#theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #F5EBDD;
+    color: #3B2A20;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#theme-toggle:hover {
+    background-color: #EFDFC8;
+}
+
+/* ===== Dark Mode: body's class = "dark-mode" ===== */
+body.dark-mode {
+    background-color: #1A130D;
+    color: #EFDFC8;
+}
+
+body.dark-mode .about-card,
+body.dark-mode .skills-card,
+body.dark-mode .project-card,
+body.dark-mode .contact-card {
+    background-color: #2C2118;
+    border-color: #4A3826;
+}
+
+body.dark-mode h2 {
+    color: #FFFFFF;
+}
+
+body.dark-mode h3 {
+    color: #FFF4E6;
+}
+
+body.dark-mode h4 {
+    color: #FFF4E6;
+}
+
+body.dark-mode #contact a {
+    color: #FFFFFF;
+}
