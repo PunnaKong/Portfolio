@@ -31,6 +31,8 @@ body {
 #about,
 #skills,
 #projects,
+#experience,
+#certifications,
 #contact {
     max-width: 800px;
     margin: 0 auto;
@@ -46,10 +48,12 @@ h2 {
     color: #3B2A20;
 }
 
-/* ===== Cards (about / skills / project / contact) ===== */
+/* ===== Cards (about / skills / project /experience / certifications / contact) ===== */
 .about-card,
 .skills-card,
 .project-card,
+.experience-card,
+.certification-card,
 .contact-card {
     background-color: #EFDFC8;
     border: 1px solid #D8C3A0;
@@ -79,6 +83,38 @@ h2 {
     margin-top: 12px;
     font-size: 0.95rem;
     color: #5C4530;
+}
+
+/* ===== Experience Grid (Flexbox) =====  */
+.experience-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.experience-card {
+    flex: 1 1 300px;
+}
+
+.experience-card h3 {
+    color: #6F4E37;
+    margin-bottom: 8px;
+}
+
+/* ===== Certifications Grid (Flexbox) =====  */
+.certifications-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.certification-card {
+    flex: 1 1 300px;
+}
+
+.certification-card h3 {
+    color: #6F4E37;
+    margin-bottom: 8px;
 }
 
 /* ===== Skills list ===== */
@@ -154,6 +190,8 @@ body.dark-mode {
 body.dark-mode .about-card,
 body.dark-mode .skills-card,
 body.dark-mode .project-card,
+body.dark-mode .experience-card,
+body.dark-mode .certification-card,
 body.dark-mode .contact-card {
     background-color: #2C2118;
     border-color: #4A3826;
