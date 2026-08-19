@@ -25,6 +25,8 @@ body {
 #hero h1 {
     font-size: 2.5rem;
     margin-top: 32px;
+    animation: fadeInUp 0.8s ease-out;
+    /* animation-name: fadeInUp, animation-duration: 0.8s, animation-timing-function: ease-out */
 }
 
 #hero p {
@@ -41,6 +43,7 @@ body {
         transform: translateY(20px);
         /* Start: Not visible + translated down by 20px from the actual position */
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -60,11 +63,6 @@ body {
     opacity: 1;
     transform: translateY(0);
     /* If JS detect scrolling then adds the "visible" class */
-
-    /* font-size: 0.95rem; */
-    margin-top: 32px;
-    animation: fadeInUp 0.8s ease-out;
-    /* animation-name: fadeInUp, animation-duration: 0.8s, animation-timing-function: ease-out */
 }
 
 /* ===== Profile Image ===== */
@@ -226,6 +224,73 @@ h2 {
     color: #A9746E;
 }
 
+/* ===== Contact Form ===== */
+
+.contact-card h3 {
+    color: #6F4E37;
+    margin-bottom: 8px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    /* set direction of box */
+    gap: 6px;
+    /* gap from label/input/textarea/button */
+}
+
+#contact-form label {
+    font-weight: bold;
+    color: #6F4E37;
+    margin-top: 10px;
+    /* gap between label and input */
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 10px 12px;
+    border: 1px solid #D8C3A0;
+    border-radius: 6px;
+    font-family: inherit;
+    /* inherit = same as body not from browser */
+    font-size: 1rem;
+    background-color: #F5EBDD;
+    color: #3B2A20;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    /* customize focus(cover line) style */
+    border-color: #6F4E37;
+    box-shadow: 0 0 0 3px rgba(111, 78, 55, 0.15);
+    /* shadow (outline) */
+}
+
+#contact-form textarea {
+    resize: vertical;
+    /* vertical resizing only */
+}
+
+#contact-form button {
+    margin-top: 14px;
+    padding: 12px 20px;
+    background-color: #6F4E37;
+    color: #F5EBDD;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+#contact-form button:hover {
+    background-color: #5C3F2B;
+    transform: translateY(-2px);
+}
+
 /* ===== Mobile Optimization ===== */
 @media (max-width: 600px) {
 
@@ -302,4 +367,15 @@ body.dark-mode h4 {
 
 body.dark-mode #contact a {
     color: #FFFFFF;
+}
+
+body.dark-mode #contact-form label {
+    color: #FFF4E6;
+}
+
+body.dark-mode #contact-form input,
+body.dark-mode #contact-form textarea {
+    background-color: #1A130D;
+    color: #EFDFC8;
+    border-color: #4A3826;
 }

@@ -136,8 +136,10 @@
         <h2>Certifications</h2>
         <div class="certifications-grid">
             <div class="certification-card reveal">
-                <img src="images/Google_Coursera_Data_Analytics.png" alt="Google Coursera Certificate" class="certification-image">
-                <img src="images/Google_Coursera_Marketing.png" alt="Google Coursera Certificate" class="certification-image">
+                <img src="images/Google_Coursera_Data_Analytics.png" alt="Google Coursera Certificate"
+                    class="certification-image">
+                <img src="images/Google_Coursera_Marketing.png" alt="Google Coursera Certificate"
+                    class="certification-image">
                 <h3>Google Coursera Certificate</h3>
                 <ul>
                     <li>Online Google Data Analytics Professional Certificate (2024)</li>
@@ -155,6 +157,26 @@
             <p>GitHub: <a href="https://github.com/PunnaKong">PunnaKong</a></p>
             <p>Phone: +66 99 928 8239</p>
         </div>
+
+        <div class="contact-card reveal">
+            <h3>Contact me</h3>
+            <form id="contact-form" action="https://formspree.io/f/mvkpvynj" method="POST">
+                <input type="hidden" name="_subject" value="New message from Portfolio Website">
+                <!-- hidden input from Webpage -->
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+        </div>
+
     </section>
     <script src="script.js"></script>
 </body>
