@@ -36,6 +36,13 @@ body {
     /* backwards = use the values from the "from" keyframe before the animation starts (Fade In)*/
 }
 
+.quote {
+    font-style: italic;
+    opacity: 0.85;
+    font-size: 0.95rem;
+    margin-top: 16px;
+}
+
 /* ===== Keyframe Animation ===== */
 @keyframes fadeInUp {
     from {
@@ -289,6 +296,21 @@ h2 {
 #contact-form button:hover {
     background-color: #5C3F2B;
     transform: translateY(-2px);
+}
+
+#form-status {
+    margin-top: 10px;
+    font-weight: bold;
+    min-height: 1.2em;
+    /* avoid layout shift */
+}
+
+#form-status.success {
+    color: #2F7A3D;
+}
+
+#form-status.error {
+    color: #B3402A;
 }
 
 /* ===== Mobile Optimization ===== */

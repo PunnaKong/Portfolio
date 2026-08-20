@@ -18,6 +18,8 @@
         <p>I graduated from King Mongkut's University of Technology North Bangkok. My department was Information
             Technology
             and Digital Innovation</p>
+        <p id="quote" class="quote">Loading a quote...</p>
+        <!-- Text will be replaced with actual quote data after page loads -->
     </section>
     <!-- ===== Section: About Me ===== -->
     <section id="about">
@@ -163,18 +165,19 @@
             <form id="contact-form" action="https://formspree.io/f/mvkpvynj" method="POST">
                 <input type="hidden" name="_subject" value="New message from Portfolio Website">
                 <!-- hidden input from Webpage -->
-                <form id="contact-form">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
 
-                    <button type="submit">Submit</button>
-                </form>
+                <button type="submit">Submit</button>
+                <p id="form-status"></p>
+                <!-- wait for form submission feedback -->
+            </form>
         </div>
 
     </section>
